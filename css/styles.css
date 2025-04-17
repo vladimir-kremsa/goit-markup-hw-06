@@ -897,7 +897,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .form-label {
@@ -978,7 +978,8 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 72px;
+    gap: 24px;
+    row-gap: 72px;
   }
 
   .logo-container {
