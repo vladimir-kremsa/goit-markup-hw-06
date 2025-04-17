@@ -374,15 +374,25 @@ button {
 .main-page {
   max-width: 320px;
   padding: 72px 0;
+  margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office/people-office-mob@2x-min.jpg);
+    url(../images/people-office/people-office-mob-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
+}
+
+@media (min-resolution: 2x) and (max-width: 767px) {
+  .main-page {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office/people-office-mob@2x-min.jpg");
+  }
 }
 
 .main-page-title {
@@ -424,11 +434,16 @@ button {
   .main-page {
     max-width: 768px;
     padding: 112px 0;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office/people-offfice-tablet@2x-min.jpg);
+  }
+
+  @media (min-resolution: 2x) and (min-width: 768px) {
+    .main-page {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/people-office/people-offfice-tablet@2x-min.jpg");
+    }
   }
 
   .main-page-title {
@@ -443,11 +458,16 @@ button {
   .main-page {
     max-width: 1440px;
     padding: 188px 0;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office/people-office-desk@2x-min.jpg);
+  }
+
+  @media (min-resolution: 2x) and (min-width: 1158px) {
+    .main-page {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/people-office/people-office-desk@2x-min.jpg");
+    }
   }
 
   .main-page-title {
@@ -804,9 +824,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  /* 72px
-  column-gap: 24px; */
+  gap: 72px;
 }
 
 .footer-logo .logo-part {
@@ -879,7 +897,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .form-label {
@@ -952,9 +970,15 @@ input::placeholder {
 }
 
 @media screen and (min-width: 768px) {
+  .page-footer .container {
+    max-width: 584px;
+  }
+
   .footer-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 96px 108px;
+    gap: 72px;
   }
 
   .logo-container {
@@ -965,20 +989,20 @@ input::placeholder {
     text-align: start;
   }
 
-  .footer-text {
-    text-align: start;
+  .form-container {
+    justify-content: flex-start;
   }
 }
 
 @media screen and (min-width: 1158px) {
-  .page-footer {
-    padding: 100px 0;
+  .page-footer .container {
+    max-width: 1158px;
   }
 
   .footer-container {
-    /* flex-wrap: nowrap; */
+    display: flex;
+    flex-wrap: nowrap;
     align-items: baseline;
-    padding: 0;
     gap: 0;
   }
 
